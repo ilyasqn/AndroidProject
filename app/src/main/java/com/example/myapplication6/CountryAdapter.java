@@ -5,6 +5,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
@@ -30,6 +32,11 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
         holder.textViewCountry.setText(country.getName());
         holder.textViewPopulation.setText("Population: " + country.getPopulation());
         holder.imageViewFlag.setImageResource(country.getFlagResId());
+
+        holder.itemView.setOnClickListener(v -> {
+            String message = "Selected : " + country.getName() + " (Population: " + country.getPopulation() + ")";
+            Toast.makeText(holder.itemView.getContext(), message, Toast.LENGTH_SHORT).show();
+        });
     }
 
     @Override
