@@ -18,8 +18,8 @@ class MainActivity : AppCompatActivity() {
         countryList.add(Country("Vietnam", "98,000,000", R.drawable.vietnam_flag))
         countryList.add(Country("United States", "320,000,000", R.drawable.usa_flag))
         countryList.add(Country("Russia", "142,000,000", R.drawable.russia_flag))
-        countryList.add(Country("Kazakhstan", "20000000", R.drawable.kazakhstan_flag))
-        countryList.add(Country("Czech", "1", R.drawable.czech))
+        countryList.add(Country("Kazakhstan", "21000000", R.drawable.kazakhstan_flag))
+        countryList.add(Country("Czech", "10000000", R.drawable.czech))
 
         val CountryAdapter: CountryAdapter = CountryAdapter(countryList)
 
